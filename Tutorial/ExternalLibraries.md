@@ -21,22 +21,22 @@ Copy your library into the external folder.
 
 ![](images/ExternalLibraries.png)
 
-Add the library to your `tsconfig.json` file.
+Add the library to your `pbiviz.json` file.
 ```json
-{
-    "compilerOptions": {
-        "allowJs": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "target": "ES5",
-        "sourceMap": true,
-        "out": "./.tmp/build/visual.js"
-    },
-    "files": [
-        ".api/v1.1.0/PowerBI-visuals.d.ts",
-        "external/easeljs-0.8.2.min.js",
-        "src/visual.ts"
-    ]
+  },
+  "apiVersion": "1.4.0",
+  "author": {
+    "name": "",
+    "email": ""
+  },
+  "assets": {
+    "icon": "assets/icon.png"
+  },
+  "externalJS": [
+      "external/easeljs-0.8.2.min.js"
+  ],
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json"
 }
 ```
 
